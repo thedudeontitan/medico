@@ -1,11 +1,26 @@
-import Login from "../components/login"
+import Login from "../src/login"
+import Home from "../src/home"
+import Navbar from "../src/navigation/navbar"
+import Navbarlg from "../src/navigation/navbarlg";
 
-export default function Home() {
+export default function App() {
+  let width = window.innerWidth;
+     if (width > 768){
   return (
-    <section id="index">
-      <div className=''>
-        <Login/>
+      <div  id="container">
+        {/* <Login/> */}
+        {/* <Home/> */}
+        
+        <Navbarlg/>
       </div>
-    </section>
-  )
+  )}
+  else{
+    return (
+      <div  id="container">
+        {/* <Login/> */}
+        {/* <Home/> */}
+        
+        <Navbar/>
+      </div>
+  )}
 }
