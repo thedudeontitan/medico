@@ -1,20 +1,21 @@
 import Login from "../src/login"
 import Home from "../src/home"
 import Profile from "../src/profile";
-// import Navbar from "../src/navigation/navbar"
-import React,{useEffect,useState} from "react";
+import Appointment from "../src/appointment";
+import React from "react";
 import dynamic from "next/dynamic";
 
 const Navbar = dynamic(()=>import("../src/navigation/navbar"),{ssr:false})
 
 export default function App() {
     return (
-      <div  id="container">
+      <div  id="container" className="bg-slate-100 h-screen">
         {/* <Login/> */}
-        {/* <Home/> */}
-        
         <Navbar/>
-        <Profile/>
+        
+        <Home/>
+        {/* <Profile/> */}
+        {/* <Appointment/> */}
       </div>
   )
 }

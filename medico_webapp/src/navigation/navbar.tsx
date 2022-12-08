@@ -8,15 +8,15 @@ export default function Navbar(){
     if(width > 768){
         return(
             <section>
-            <nav className="flex fixed top-0 left-0 right-0 bg-blue-400 h-14 z-10 w-auto">
-                    <div className="ml-5 my-auto text-3xl font-bold">
+            <nav className="flex fixed top-0 left-0 right-0 bg-blue-400 h-14 z-10 w-full">
+                    <div className="ml-5 lg:ml-64 my-auto text-xl lg:text-3xl font-bold">
                         <a href="/">MEDICO</a>
                     </div>
-                    <ul className="flex font-bold ml-auto text-xl ">
+                    <ul className="flex font-bold ml-auto text-lg lg:text-xl mr-5 lg:mr-64">
                         <li className="mr-5 my-auto ">
                             <a href="/">Appointment</a>
                         </li>
-                        <li className="mr-5 my-auto">
+                        <li className="my-auto">
                             <a href="/">Profile</a>
                         </li>
                     </ul>
@@ -27,6 +27,13 @@ export default function Navbar(){
     else{
     return(
         <section>
+            <div className="flex w-full h-12 bg-slate-600 ">
+                <a href="/">
+                    <h1 className="font-bold mt-2 text-lg ml-5">
+                        MEDICO
+                    </h1>
+                </a>
+            </div>
             <nav className="fixed bottom-0 left-0 right-0 h-12 z-10 shadow-2xl shadow-black">
                 <ul className="flex flex-row  text-cyan-600">
                     <li className="mx-auto text-3xl p-2">
