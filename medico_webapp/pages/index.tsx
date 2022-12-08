@@ -1,7 +1,7 @@
 import Login from "../src/login"
 import Home from "../src/home"
+import Profile from "../src/profile";
 // import Navbar from "../src/navigation/navbar"
-// import Navbarlg from "../src/navigation/navbarlg";
 import React,{useEffect,useState} from "react";
 import dynamic from "next/dynamic";
 
@@ -14,6 +14,7 @@ export default function App() {
         {/* <Home/> */}
         
         <Navbar/>
+        <Profile/>
       </div>
   )
 }
