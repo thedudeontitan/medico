@@ -1,7 +1,7 @@
 
 export default function Home() {
   return (
-    <section>
+    <section className="min-h-screen">
       page
     </section>
   )
