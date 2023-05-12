@@ -4,6 +4,7 @@ import { CiStethoscope } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
 import './globals.css'
 import { Inter } from 'next/font/google'
+import Link from "next/link";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,7 +20,36 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      
+      <body>
+      <nav id="navbar">
+        <div className="fixed top-0 hidden lg:flex">
+          <div className="flex flex-row w-screen items-center uppercase lg:px-72 backdrop-blur-lg">
+            <Link href="/home" className="p-3 text-2xl font-bold text-slate-600">
+              <span>MEDICO</span>
+            </Link>
+            <div className="ml-auto">
+              <Link href="/doctor" className="p-2 text-lg">
+                <span>DOCTORS</span>
+              </Link>
+              <Link href="/profile" className="p-2 text-lg ">
+                <span>PROFILE</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="flex lg:hidden  flex-row fixed bottom-0 bg-white w-full justify-around text-2xl p-4 shadow-md">
+          <Link href="/home" className="">
+            <CiStethoscope />
+          </Link>
+          <Link href="/doctor" className="">
+            <AiOutlineOrderedList />
+          </Link>
+          <Link href="/profile" className="">
+            <CgProfile />
+          </Link>
+        </div>
+    </nav>
+    </body>
       <body className={inter.className}>{children}</body>
     </html>
   )
