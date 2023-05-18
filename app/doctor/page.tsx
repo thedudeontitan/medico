@@ -4,21 +4,25 @@ import Image from "next/image";
 
 const docinfo = [
   {
+    id:"1",
     name: "John Doe",
     specialization: "surgeon",
     address: "area, city, state",
   },
   {
+    id:"2",
     name: "John Doe",
     specialization: "surgeon",
     address: "area, city, state",
   },
   {
+    id:"3",
     name: "John Doe",
     specialization: "surgeon",
     address: "area, city, state",
   },
   {
+    id:"4",
     name: "John Doe",
     specialization: "surgeon",
     address: "area, city, state",
@@ -42,7 +46,7 @@ export default function Doctors() {
         </div>
       </div>
       {docinfo.map((doc) => (
-        <div className="flex flex-row shadow bg-white rounded-3xl w-full h-44 lg:h-52 mt-10 min-w-fit">
+        <div key={doc.id} className="flex flex-row shadow bg-white rounded-3xl w-full h-44 lg:h-52 mt-10 min-w-fit">
           <div className=" px-5 ">
             <Image src="/doctor.svg" className="lg:w-52 lg:h-52" width={40} height={40} alt="doctor image" />
           </div>

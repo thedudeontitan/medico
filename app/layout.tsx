@@ -3,10 +3,8 @@ import { AiOutlineOrderedList } from "react-icons/ai";
 import { CiStethoscope } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
 import "./globals.css";
-import { Inter } from "next/font/google";
 import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Medico",
@@ -20,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body >
         <main>
           <nav id="navbar">
             <div className="fixed top-0 hidden lg:flex">
