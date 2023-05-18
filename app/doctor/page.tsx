@@ -1,5 +1,6 @@
 import React from "react";
 import { CgSearch } from "react-icons/cg";
+import Image from "next/image";
 
 const docinfo = [
   {
@@ -43,7 +44,7 @@ export default function Doctors() {
       {docinfo.map((doc) => (
         <div className="flex flex-row shadow bg-white rounded-3xl w-full h-44 lg:h-52 mt-10 min-w-fit">
           <div className=" px-5 ">
-            <img src="/doctor.svg" className="h-40 w-40 lg:w-52 lg:h-52" />
+            <Image src="/doctor.svg" className="lg:w-52 lg:h-52" width={40} height={40} alt="doctor image" />
           </div>
           <div className="flex flex-col lg:flex-row w-full pt-5 ml-5">
             <div className="flex flex-col  pt-5">

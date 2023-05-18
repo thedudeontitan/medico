@@ -1,5 +1,6 @@
 import React from "react";
 // import doctor from "../assets/doctor.svg";
+import Image from "next/image";
 
 const profileinfo = {
   name: "John Doe",
@@ -29,7 +30,13 @@ export default function Profile() {
   return (
     <section id="profile" className="">
       <div className="flex flex-col lg:flex-row">
-        <img src="/doctor.svg" className="w-56 my-10 lg:w-56 lg:mx-10" />
+          <Image
+            src="/doctor.svg"
+            className="w-56 my-10 mx-auto lg:w-56 lg:mx-10"
+            width={50}
+            height={40}
+            alt="doctor image"
+          />
         <div className="flex w-full">
           <div className="bg-white w-full mx-auto mt-5 h-fit rounded-lg shadow flex flex-col p-2 gap-y-2">
             <span className="">Name: {profileinfo.name}</span>
@@ -51,9 +58,14 @@ export default function Profile() {
             <span>{info.file}</span>
           </div>
         ))}
-        <button className="bg-slate-500 rounded text-white p-2 h-fit w-fit ml-auto mb-5 mx-5 shadow-lg">
-          Upload Report
-        </button>
+        <div className="ml-auto my-5 mx-5 flex gap-5 ">
+          <button className="bg-slate-500 rounded text-white p-2 h-fit w-fit shadow-lg">
+            Upload Report
+          </button>
+          <button className="bg-slate-500 rounded text-white p-2 h-fit w-fit shadow-lg">
+            Share Report
+          </button>
+        </div>
       </div>
     </section>
   );

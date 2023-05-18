@@ -1,6 +1,15 @@
 import React from "react";
 import { CgSearch } from "react-icons/cg";
 
+
+const profileinfo = {
+  name: "John Doe",
+  specialization: "surgeon",
+  address: "area, city, state",
+  "blood group": "o positive",
+};
+
+
 export default function Home() {
   return (
     <section className="">
@@ -16,8 +25,8 @@ export default function Home() {
         </div>
       </div>
       <div className="shadow bg-white rounded-3xl w-full h-60 my-10"></div>
-      <div className="flex lg:flex-row flex-col lg:gap-5">
-        <div className="shadow bg-white rounded-3xl w-full h-60"></div>
+      <div className="flex lg:flex-row flex-col lg:gap-5 gap-10">
+        <div className="shadow bg-white rounded-3xl w-full h-60 "></div>
         <div className="shadow bg-white rounded-3xl w-full h-60"></div>
         <div className="shadow bg-white rounded-3xl w-full h-60"></div>
       </div>
