@@ -1,7 +1,5 @@
 import React from "react";
-// import Search from "../components/Search";
 import { CgSearch } from "react-icons/cg";
-// import doctor from "../assets/doctor.svg";
 
 const docinfo = [
   {
@@ -58,15 +56,13 @@ export default function Doctors() {
               <span className="mt-2 lg:mt-5 text-sm lg:text-base">
                 {doc.address}
               </span>
-              
             </div>
             <button className="ml-auto mt-auto h-10 bg-slate-400 rounded p-2 lg:mr-10 lg:mb-10 m-5">
               Book
             </button>
-            </div>
+          </div>
         </div>
       ))}
-      <div className="p-10"/>
     </section>
   );
 }

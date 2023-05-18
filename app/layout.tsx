@@ -53,7 +53,7 @@ export default function RootLayout({
               </Link>
             </div>
           </nav>
-          <div className="mx-5 md:mx-56 lg:mx-96 pb-10 lg:pt-14">
+          <div className="mx-5 md:mx-56 lg:mx-96 pb-10 lg:pt-14 min-h-screen">
           {children}
           </div>
         </main>

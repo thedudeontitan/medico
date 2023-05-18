@@ -28,7 +28,7 @@ const uploaddata = [
 export default function Profile() {
   return (
     <section id="profile" className="">
-      <div className="flex flex-col pt-10 lg:pt-20 lg:flex-row">
+      <div className="flex flex-col lg:flex-row">
         <img src="/doctor.svg" className="w-56 my-10 lg:w-56 lg:mx-10" />
         <div className="flex w-full">
           <div className="bg-white w-full mx-auto mt-5 h-fit rounded-lg shadow flex flex-col p-2 gap-y-2">
