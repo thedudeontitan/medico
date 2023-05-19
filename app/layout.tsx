@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body >
+      <body className="bg-slate-200">
         <main>
           <nav id="navbar">
             <div className="fixed top-0 hidden lg:flex">
