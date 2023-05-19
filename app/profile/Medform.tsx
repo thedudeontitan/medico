@@ -5,12 +5,17 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { MdOutlineFileUpload } from "react-icons/md";
 
-export default function Medform() {
+export default function Medform(props: { visible: boolean; onClose: any }) {
   const [startDate, setStartDate] = useState<any>();
+  if (!props.visible) return null;
 
+  const handleOnClose = (e: any) => {
+    if (e.target.id == "container") props.onClose(false);
+  };
   return (
     <div
       id="container"
+      onClick={handleOnClose}
       className="z-20 fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center"
     >
       <div className="shadow-2xl bg-slate-500 text-white rounded-lg w-fit h-fit mx-5 lg:mt-10 lg:mx-80 p-5">
@@ -25,7 +30,7 @@ export default function Medform() {
               placeholder="Name"
             />
             <DatePicker
-              placeholderText="Select Date "
+              placeholderText={startDate}
               className="px-2 py-1 h-10 rounded-md"
               selected={startDate}
               onChange={(date) => setStartDate(date)}
@@ -40,7 +45,7 @@ export default function Medform() {
               <button className="bg-slate-200 rounded-md px-2 py-1 text-black hover:bg-opacity-80">
                 Cancel
               </button>
-              <button className="bg-slate-200 rounded-md px-2 py-1 text-black hover:bg-opacity-80">
+              <button onClick={handleOnClose} className="bg-slate-200 rounded-md px-2 py-1 text-black hover:bg-opacity-80">
                 Upload
               </button>
             </div>

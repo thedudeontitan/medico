@@ -13,22 +13,23 @@ datasource db {
 }
 
 model User {
-  id           Int         @id @default(autoincrement())
+  id           String      @id @default(cuid())
   name         String?
   email        String?     @unique
   address      String?
   bloodGroup   String?
   allergy      String?
   medCondition String?
+  profilepic   String?
   createdAt    DateTime    @default(now()) @map(name: "created_at")
   updatedAt    DateTime    @updatedAt @map(name: "updated_at")
-  posts        MedRecord[]
+  MedRecords   MedRecord[]
 
   @@map(name: "users")
 }
 
 model Doctor {
-  id             Int     @id @default(autoincrement())
+  id             String  @id @default(cuid())
   name           String?
   specialization String?
   address        String?
@@ -36,9 +37,9 @@ model Doctor {
 }
 
 model MedRecord {
-  id         Int      @id @default(autoincrement())
+  id         String   @id @default(cuid())
   patient    User?    @relation(fields: [patientID], references: [id])
-  patientID  Int?
+  patientID  String?
   reportname String?
   date       DateTime @default(now())
   file       String?

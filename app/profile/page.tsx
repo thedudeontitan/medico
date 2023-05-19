@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Medform from "./Medform";
+import { useState } from "react";
 
 const profileinfo = {
   name: "John Doe",
@@ -31,6 +33,11 @@ const uploaddata = [
   },
 ];
 export default function Profile() {
+  const [formVisibility, setFormVisibility] = useState(false);
+
+  const handleOnClose = () =>{
+    setFormVisibility(false)
+  }
   return (
     <section id="profile" className="">
       <div className="flex flex-col lg:flex-row mb-5">
@@ -76,7 +83,7 @@ export default function Profile() {
           </div>
         ))}
         <div className="ml-auto my-5 mx-5 flex gap-5 ">
-          <button className="bg-slate-500 rounded text-white p-2 h-fit w-fit shadow-lg">
+          <button onClick={()=>(setFormVisibility(true))} className="bg-slate-500 rounded text-white p-2 h-fit w-fit shadow-lg">
             Upload Report
           </button>
           <button className="bg-slate-500 rounded text-white p-2 h-fit w-fit shadow-lg">
@@ -84,7 +91,7 @@ export default function Profile() {
           </button>
         </div>
       </div>
-      {/* <Medform/> */}
+      <Medform visible={formVisibility} onClose={handleOnClose}/>
     </section>
   );
 }
