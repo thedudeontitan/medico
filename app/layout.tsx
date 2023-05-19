@@ -39,7 +39,7 @@ export default function RootLayout({
                 </div>
               </div>
             </div>
-            <div className="flex lg:hidden  flex-row fixed bottom-0 bg-white w-full justify-around text-2xl p-4 shadow-md">
+            <div className="flex lg:hidden text-black flex-row fixed bottom-0 bg-white w-full justify-around text-2xl p-4 shadow-md">
               <Link href="/home" className="">
                 <CiStethoscope />
               </Link>

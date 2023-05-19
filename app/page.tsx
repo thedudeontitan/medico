@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { CgSearch } from "react-icons/cg";
 
@@ -15,9 +16,8 @@ export default function Home() {
       <div className="fixed inset-0 -z-10">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-slate-600 to-transparent opacity-75 transform origin-bottom-left skew-y-12 translate-y-1/2"></div>
       </div>
-      <div className=""></div>
-      <div className="flex flex-col lg:flex-row items-center max-h-screen">
-        <div className="flex flex-col gap-5 items-center lg:items-start">
+      <div className=" flex flex-col lg:flex-row items-center max-h-screen">
+        <div className="flex flex-col gap-5 items-center lg:items-start pt-10">
           <span className="text-7xl font-medium">
             Platform for all your medical needs
           </span>
@@ -27,7 +27,8 @@ export default function Home() {
           </span>
           <div className="flex flex-col lg:flex-row gap-4">
             <button className="bg-slate-900 w-40 px-2 py-3 rounded-md text-xl text-white shadow-md hover:bg-opacity-70 transition-all">
-              Find Doctor
+             <Link href="/doctor">Find Doctor</Link>
+              
             </button>
             {/* <button
                   className="bg-slate-400 w-40 px-2 py-3 rounded-md text-xl shadow-md hover:bg-opacity-70 transition-all"

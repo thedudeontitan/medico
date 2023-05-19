@@ -47,8 +47,8 @@ export default function Doctors() {
       </div>
       {docinfo.map((doc) => (
         <div key={doc.id} className="flex flex-row shadow bg-white rounded-3xl w-full h-44 lg:h-52 mt-10 min-w-fit">
-          <div className=" px-5 ">
-            <Image src="/doctor.svg" className="lg:w-52 lg:h-52" width={40} height={40} alt="doctor image" />
+          <div className=" pl-5 my-auto">
+            <Image src="/doctor.svg" className="lg:w-52 lg:h-52 w-30 h-30 mt-auto" width={200} height={200} alt="doctor image" />
           </div>
           <div className="flex flex-col lg:flex-row w-full pt-5 ml-5">
             <div className="flex flex-col  pt-5">
