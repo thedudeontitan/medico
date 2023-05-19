@@ -1,12 +1,13 @@
 import React from "react";
-// import doctor from "../assets/doctor.svg";
 import Image from "next/image";
+import Medform from "./Medform";
 
 const profileinfo = {
   name: "John Doe",
-  specialization: "surgeon",
   address: "area, city, state",
-  "blood group": "o positive",
+  bloodGroup: "o positive",
+  allergy: "None",
+  medCondition: "None",
 };
 
 const uploaddata = [
@@ -32,7 +33,7 @@ const uploaddata = [
 export default function Profile() {
   return (
     <section id="profile" className="">
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-row mb-5">
         <Image
           src="/doctor.svg"
           className="w-56 my-10 mx-auto lg:w-56 lg:mx-10"
@@ -40,17 +41,22 @@ export default function Profile() {
           height={40}
           alt="doctor image"
         />
-        <div className="flex w-full">
-          <div className="bg-white w-full mx-auto mt-5 h-fit rounded-lg shadow flex flex-col p-2 gap-y-2">
+        {/* <div className="flex w-full"> */}
+        <div className="bg-white w-full mx-auto mt-10 h-fit rounded-lg shadow flex flex-col p-2 ">
+          <span className="text-xl pt-2 font-semibold text-slate-600 text-opacity-70">
+            Personal Details
+          </span>
+          <div className="flex flex-col gap-y-2 p-2">
             <span className="">Name: {profileinfo.name}</span>
             <span className="">Address: {profileinfo.address}</span>
-            <span className="">blood group: {profileinfo["blood group"]}</span>
-            <span className="">{profileinfo["blood group"]}</span>
-            <span className="">{profileinfo["blood group"]}</span>
-            <span className="">{profileinfo["blood group"]}</span>
-            <span className="">{profileinfo["blood group"]}</span>
+            <span className="">blood group: {profileinfo.bloodGroup}</span>
+            <span className="">Allergy: {profileinfo.allergy}</span>
+            <span className="">
+              Medical Conditions: {profileinfo.medCondition}
+            </span>
           </div>
         </div>
+        {/* </div> */}
       </div>
       <div className="flex flex-col bg-white rounded-lg w-full h-fit shadow-md ">
         <span className="p-3 text-xl">Medical History</span>
@@ -78,6 +84,7 @@ export default function Profile() {
           </button>
         </div>
       </div>
+      {/* <Medform/> */}
     </section>
   );
 }
